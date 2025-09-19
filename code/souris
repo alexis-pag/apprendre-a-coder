@@ -1,0 +1,8 @@
+from pynput.mouse import Listener
+
+def on_click(x, y, button, pressed):
+    # Bloque tous les clics
+    return False  # empêche l'action
+
+with Listener(on_click=on_click) as listener:
+    listener.join()
